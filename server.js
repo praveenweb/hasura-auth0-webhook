@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3000;
 
 if (!authDomain) {
   console.log('Please set your auth0 domain as an environment variable: AUTH_ZERO_DOMAIN');
-  return;
 }
 
 app.get('/', (req, res) => {
