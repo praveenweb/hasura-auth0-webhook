@@ -3,6 +3,7 @@ const request = require('request');
 const app = express();
 
 const authDomain = process.env.AUTH_ZERO_DOMAIN;
+const PORT = process.env.PORT || 3000;
 
 if (!authDomain) {
   console.log('Please set your auth0 domain as an environment variable: AUTH_ZERO_DOMAIN');
@@ -38,4 +39,4 @@ app.get('/', (req, res) => {
   })
 });
 
-app.listen(3002, () => console.log('Example app listening on port 3002!'))
+app.listen(PORT, () => console.log('Example app listening on port ' + PORT + ' !'))
